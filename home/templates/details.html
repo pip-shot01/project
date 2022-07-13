@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+{% block title %}{{detail.name}}{% endblock title %}
+{% block header %} {% include "header.html" %} {% endblock header %}
+
+{% block corousel %} {% include "corousel.html" %} {% endblock corousel %}
+
+{% block content %} 
+    <div class="container " >
+      <div class="row justify-content-center text-center p-5 w-50" >
+        <div class="col-10 col-sm-10 col-md-4 col-lg-3 "> </div>
+          <div class="card bg-transparent" style="box-shadow: 1px -1px 20px 3px yellowgreen;">
+            <img src="{{detail.img.url}}" class="card-img-top rounded-top border-0">
+              <div class="card-body">
+                <h5 class="card-title text-success">Product:{{detail.name}}</h5>
+                <h5 class="card-text text-success">Price:{{detail.price}}</h5>
+                <p class="card-text text-secondary">Description:{{detail.description}}</p>
+                <form action="{% url 'shopcart' %}" method="POST">
+                {% csrf_token %}
+                    <input type="number" name="quantity" value="1" min="{{detail.min_quantity}}" max="{{detai.max_quantity}}" class="form-control shadow-none m-auto mb-2 border-warning" style="width:60px;">
+                    <input type="hidden" name="product_id" value="{{detail.id}}">
+                    <button type="submit" class="btn btn-primary text-white">Add to cart</a>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+{% endblock content %} 
+
+
+{% block footer %} {% include "footer.html" %}{% endblock footer %}

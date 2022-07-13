@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+/* :root{
+    --bg-color: 
+} */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.team p{
+    color: white;
+}
+body{
+    font-family:'Signika Negative', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.foota a{
+    color: white;
+}
+.foota a:hover{
+    color: crimson;
+}
+#navbarSupportedContent ul{
+    align-items: flex-end;
+} 
+.d-flex [type="submit"]{
+    background-color: red;
+}
+ .nav-item .dropdown-menu .dropdown-item:hover{
+    background-color: palegreen;
+    color: aliceblue !important;
+}
+.navbar{
+    background-color: rgb(255, 230, 6);
+    position: sticky;
+}
+.navbar a{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.navbar i{
+    color: rgb(116, 116, 20);
+    border: solid rgb(18, 8, 71) 2px;
+    width: 2.4rem;
+    height: 2rem;
+    padding-top: .3rem;
+}
+.navbar-toggler{
+    color: rgb(50, 9, 128);
+}
+#navbarSupportedContent{
+    align-items: flex-end;
+    line-height: 1.4rem;
+}
+#navbarSupportedContent .dropdown-menu{ 
+     background-color: rgb(231, 210, 23); 
+    border: none;
+    outline: none;
+}
+.dropdown-menu .dropdown-item:hover{
+    color: blue;
+} 
+.carousel-caption h1{
+    color: red;
+    font-weight: 700;
+    font-style: normal;
+}
+.carousel-caption p{
+    color: rgb(57, 243, 73);
+    font-style: italic;
+    font-size: large;
+}
+.carousel-indicators[type="button"]{
+    color: red;
+}
+.carousel-control-prev .visually-hidden i{
+    background-color: red;
+    color: blue;
+}  
+
+.bed{
+    background: url(../images/tellos.jpg);
+    background-repeat: none;
+    /* background-color: red; */
+    background-size: 100%;
+    background-attachment: fixed;
+    color: white;
+    background-position: absolute;
+}
+.cap{
+    color: yellow;
+    text-align: center;
+    font-weight: 900;
+    font-size: xx-large;
+    padding-top: 5rem;
+}
+.truncate{
+    color: rgb(163, 165, 157);
+}
+#contact{
+    /* background-color: rgb(26, 170, 91); */
+    font-weight: 400;
+    font-size: larger;
+    line-height: 5rem;
+    text-transform: capitalize;
+    padding-left: 2rem;
+    box-shadow: 2px 2px 20px 2px greenyellow;
+    /* box-shadow: 3px 2px 20px rgb(234, 235, 225); */
+}
+#contact:hover{
+    transition: 7s ease-in-out;
+    transform: translateY(-30px);
+}
+.mep iframe{
+    width: 100%;
+    height: 60vh;
+    margin-top: 3rem;
+}
+.foot{
+    height: 0vh;
+}
+/* shopcart  */
+.table-box button{
+    border: none;
+}
+.table-box thead{
+    color: crimson;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.table-box input[type="number"]{
+    text-align: center;
+    color: crimson;
+    border: 3px solid peachpuff;
+    outline: none;
+}
+.table-box tr{
+    color: crimson;
+    text-transform: capitalize;
+    text-align: center;
+}
+.table-box img{
+    height: 2rem;
+}
+.table-box .fa-solid{
+    color: red;
+}
+/* shopcart done  */
+/* checkout  */
+.check-title{
+    text-align: center;
+    text-transform: capitalize;
+    color: peachpuff;
+    font-weight: 900;
+}
+.form-box{
+    color: red;
+}
+.form-box input{
+    box-shadow: none;
+    outline: none;
+    border: 1px solid crimson;
+}
+.form-box input:focus{
+    box-shadow: none;
+    outline: none;
+    border: 1px solid crimson;
+    color: crimson;
+}
+/* callback  */
+.callback a{
+    background-color: crimson;
+    color: white;
+    text-transform: capitalize;
+}
+.calllback a:hover{
+    background: peachpuff;
+    color: crimson;
+    font-weight: 600;
+}
+/* callback done*/
+.profile-form input{
+    background: peachpuff;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.profile-form input:focus{
+    background: peachpuff;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.profile-form label{
+    color: crimson;
+    font-weight: 600;
+}
+

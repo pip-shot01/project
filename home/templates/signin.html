@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} |Signin{% endblock title %}
+{% block header %} {% include 'header.html' %}{% endblock header %}
+
+{% block content %}
+
+<div class="container mb-5">
+  <h3 class="cap">User Signin</h3>
+  <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-warning text-center gy-5">
+    <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4 d-none d-lg-block ">
+      <div class="card border-0">
+        <img src="{% load static %}images/opt 1188.jpg" class="card-img-top rounded-circle w-50 mx-auto" >
+        <div class="card-body">
+        </div>
+      </div>
+
+      </div>
+    <div class="col-10 col-sm-10 col-md-4 col-lg-5 col-xl-5 ">
+      <div class="profile-form px-lg-3 text-start">
+        <form action="{% url 'signin' %}" method='POST'>
+          {% csrf_token %}
+            <div class="mb-3">
+              <div id="texthelp" class="form-text text text-capitalize mb-3 form-text">
+                to track your transactions kindly signin or signup
+              </div>
+              <label for="exampleInputEmail1" class="form-label">username</label>
+              <input type="text" class="form-control" name='username' id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-2">
+              <label for="exampleInputPassword1" class="form-label">password</label>
+              <input type="password" name='password' class="form-control" id="exampleInputPassword1">
+              <div id="texthelp" class="form-text text-capitalize mt-3 form-text">
+                signup to your account or signup to create one.
+              </div>
+            <button type="submit" class="btn btn-danger mt-4">sign-in</button>
+          </form>
+            <a href="{% url 'signup' %}" type="submit" class="btn btn-danger mt-4">signup</a>
+      </div>
+    </div>
+  </div>
+    
+    <div class="col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3 d-none d-lg-block">
+     <div class="card border-0">
+        <img src="{% load static %}images/download (1).jpg" class="card-img-top rounded-circle mx-auto w-70" alt="">
+     </div>
+  </div>
+</div>
+</div>
+</div>
+{% endblock content %}
+
+
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}

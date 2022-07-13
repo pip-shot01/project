@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} ||profile_update{% endblock title %}
+{% block header %} {% include 'header.html' %}{% endblock header %}
+{% block corousel %} {% include 'corousel.html' %}{% endblock corousel %}
+
+
+{% block content %} 
+<div class="container mb-5">
+    <h3 class="cap">profile_update</h3>
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-warning text-center gy-5">
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4 ">
+        <div class="card bg-transparent border: 0%;">
+          <img src="{{profile.pix.url}}" class="card-img-top rounded-circle w-50 mx-auto" >
+          <div class="card-body">
+            <h5 class="card-title">Name:{{profile.first_name|title}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4 ">
+        <div class="profile-form px-lg-5">
+          <form action="{% url 'profile_update' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+              <div class="form-group">
+                {{update}}
+            </div>  
+               <button type="submit" class="btn btn-primary">update profile</button> 
+            </form>
+        </div>
+        </div>
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+        <ul class="list-unstyled callback">
+          <li class="mb-3"><a href="{% url 'index' %}" class="btn w-75"> Home</a></li>
+          <li class="mb-3"><a href="{% url 'products' %}" class="btn w-75"> products</a></li>
+          <li class="mb-3"><a href="{% url 'profile' %}" class="btn w-75"> profile</a></li>
+          <li class="mb-3"><a href="{% url 'password' %}" class="btn w-75"> update password</a></li>
+          <li class="mb-3"><a href="#" class="btn w-75"> transactions details</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}

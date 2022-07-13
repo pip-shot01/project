@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+{% block title %} || Products{% endblock title %}
+{% block header %} {% include "header.html" %} {% endblock header %}
+{% block content %}
+<div class='bed'>
+<div class="container">
+    <div class="row justify-content-center text-center pt-5">
+        {% if product %}
+            {% for item in product %}
+                <div class="col-10 col-sm-10 col-md-4 col-lg-3 ">
+                  <div class="card bg-transparent" style="box-shadow: 1px -1px 20px 3px yellowgreen;">
+                    <img src="{{item.img.url}}" class="card-img-top rounded-top border-0">
+                    <div class="card-body">
+                    <h5 class="card-title text-primary">Name: {{item.name}}</h5>
+                    <p class="card-text text-primary"> price:{{item.price}}</p>
+                    <p class="card-text text-primary"> description:{{item.description}}</p>
+                    <a href="{% url 'details' item.id %}" class="btn btn-warning text-white">add to cart</a>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+         {% endif %}
+        </div>
+    </div>
+
+{% endblock content %} 
+</div>
+
+{% comment %} {% block contact %} {% include "contact.html" %} {% endblock contact %} {% endcomment %}
+
+{% comment %} {% block team %} {% include "team.html" %}{% endblock team %} {% endcomment %}
+
+{% block footer %} {% include "footer.html" %}{% endblock footer %}

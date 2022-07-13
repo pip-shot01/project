@@ -1,0 +1,51 @@
+<div class="container">
+    <h1 class="cap">CONTACT US</h1>
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-10 col-md-5 gy-5 order-1 order-sm-0">
+            <div id="contact">
+              address: 28,yunisa Adeniji Street,<br>
+              Ikeja, Lagos<br>
+              Tel:07093829873<br>
+              Email:admin@teamvoltage.com<br>
+              website:www.teamvoltage.com<br>
+            </div>
+          </div>
+             
+            <div class="col-10 col-sm-10 col-md-5 gy-5 order-0 order-sm-1 rounded-end" style="box-shadow: 1px -1px 20px 3px greenyellow">
+              <form action="{% url 'contact' %}" method="POST">
+              {% csrf_token %}
+                <div class="mb-1">
+                  <label for="text" class="">First Name</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" name="full_name" placeholder="first name">
+                </div>
+                <div class="mb-1">
+                  <label for="formGroupExampleInput2" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" name="last_name" placeholder="last name">
+                </div>                           
+                <div class="mb-1">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" name="email" id="formGroupExampleInput" placeholder="your email">
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone number</label>
+                  <input type="text" class="form-control" name="phone" id="formGroupExampleInput2" placeholder="telephone">
+                </div>
+                <div class="form-floating mb-1 text-dark">
+                  <textarea class="form-control" placeholder="your message" name="message" id="floatingTextarea"></textarea>
+                  <label for="floatingTextarea">your message</label>
+                </div>
+                <button type="submit" class="btn btn-warning">Send</button>
+              </form>
+          </div>
+        </div>
+      </div>
+      
+<div class="mep">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.383209486951!2d3.344408114266791!3d6.599206524110642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b92257fd5772b%3A0xe25e9709d5a10dbc!2s2%20Yinusa%20Adeniji%20St%2C%20Allen%20100271%2C%20Ikeja!5e0!3m2!1sen!2sng!4v1651604882132!5m2!1sen!2sng"
+        width="450" height="300"  style="border: 0%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</i>
+
+
+
+            <!-- contact  done-->

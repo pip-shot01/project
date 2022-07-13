@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %} |Signup{% endblock title %}
+{% load static %}
+{% block header %} {% include 'header.html' %}{% endblock header %}
+{% block content %}
+<div class="container mb-5">
+    <h3 class="cap">user signup</h3>
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-warning text-center gy-5">
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4 d-none d-lg-block ">
+        <div class="card border-0">
+          <img src="{% load static %}images/opt 1188.jpg" class="card-img-top rounded-circle w-50 mx-auto" >
+          </div>
+        </div>
+      <div class="col-10 col-sm-10 col-md-4 col-lg-5 col-xl-5 ">
+        <div class="profile-form px-lg-3 text-start">
+          <form action="{% url 'signup' %}" method="POST">
+          {% csrf_token %}
+              <div class="mb-2">
+                <div id="texthelp" class="form-text text text-capitalize mb-3 form-text">
+                  to fast-track your transactions kindly signup or signin if you have an existing account</div>
+                <label for="exampleInputEmail1" class="form-label">username</label>
+                <input type="text" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">firstname</label>
+                <input type="text" name='first_name' class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">last name</label>
+                <input type="text" name='last_name' class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">email address</label>
+                <input type="email" name='email' class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">address</label>
+                <input type="text" name='address' class="form-control" id="exampleInputPassword1">
+              </div> 
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">state</label>
+                <input type="text" name='state' class="form-control" id="exampleInputPassword1">
+                <input type="hidden" name='pix' value="profile/download_g2KcsP6.jpg" class="form-control" id="exampleInputPassword1">
+              </div> 
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">phone</label>
+                <input type="text" name='phone' class="form-control" id="exampleInputPassword1">
+              </div>  
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">password</label>
+                <input type="password" name='password1' class="form-control" id="exampleInputPassword1">
+                </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">repeat password</label>
+                <input type="password" name='password2' class="form-control" id="exampleInputPassword1">
+              <div id="texthelp" class="form-text text-capitalize mt-3 form text">
+                    signup to create an account or signin if you already have 
+              </div>
+                  <button type="submit" class="btn btn-danger w-50 mt-4">signup</button>
+              </div>
+          </form>
+              <a href="{% url 'signin' %}" type="submit" class="btn btn-danger mt-4">signin</a>
+              <div id="emailHelp" class="form-text">password should be atleast 8 characters long </div>
+              <div id="emailHelp" class="form-text">can be a combination of alphabets,numbers and numeric </div>
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3 d-none d-lg-block">
+       <div class="card border-0">
+          <img src="{% static '' %}images/download (1).jpg" class="card-img-top rounded-circle mx-auto w-70" alt="">
+       </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}

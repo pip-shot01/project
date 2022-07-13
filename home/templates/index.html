@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}|| Home{% endblock title %}
+ {% block header %} {% include "header.html" %} {% endblock header %}
+ {% block corousel %} {% include "corousel.html" %} {% endblock corousel %}
+ {% block about %} {% include "about.html" %}{% endblock about %}
+  
+
+
+{% block content %}
+  <div class="container">
+      <div class="row justify-content-center text-center mt-5 pt-5">
+        {% if latest %}
+          {% for v in latest %}
+            <div class="col-10 col-sm-10 col-md-4 col-lg-3 ">
+              <div class="card bg-transparent" style="box-shadow: 1px -1px 20px 3px yellowgreen;">
+                <img src="{{v.img.url}}" class="card-img-top rounded-top border-0">
+                  <div class="card-body">
+                  <h5 class="card-title text-primary">Name: {{v.name}}</h5>
+                  <p class="card-text text-primary"> Price: {{v.price}}</p>
+                  <a href="b" class="btn btn-warning text-white">Description: {{v.description}}</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+  </div>
+{% endblock content %} 
+
+{% block contact %} {% include "contact.html" %} {% endblock contact %}
+
+{% block team %} {% include "team.html" %}{% endblock team %}
+
+{% block footer %} {% include "footer.html" %}{% endblock footer %}

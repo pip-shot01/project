@@ -1,0 +1,70 @@
+ {% load static %}
+ <!-- header  -->
+ <nav class="navbar navbar-expand-lg">
+    <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="{% static '' %}images/download.png" alt="bootstrap" width="50rem">Telostask</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon" ></span> -->
+      <span><i class="fa-solid fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about" id="top">About</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'displaycart' %}">
+            {% if cartcount > 0  %}
+                <span class="badge bg-warning text-white">{{cartcount}}</span>
+            {% else %}
+                <span class="badge bg-warning text-white">0</span>
+            {% endif %}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Team">Team</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'products' %}" id="top">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile' %}" id="top">profile</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="{% url 'displaycart' %}">displaycart</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'signout' %}">signout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'signin' %}">signin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'signup' %}">signup</a>
+        </li>
+        </ul>
+        </ul>
+        {% endif %}
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  {% if messages %}
+    {% for item in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>{{item}}</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+  {% endif %}
+  
+ <!-- Header done  -->
+          
