@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 import os
 from pathlib import Path
 # import os
@@ -31,7 +30,7 @@ DEBUG = True
 # DEBUG = False
 
 ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['34.219.175.97', '*']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -70,7 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'home.context_processor.readcart',
+                # 'home.context_processor.readcart',
             ],
         },
     },

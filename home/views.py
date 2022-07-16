@@ -298,8 +298,8 @@ def pay(request):
     if request.method == 'POST':
         api_key = 'sk_test_3dc8d3616a6bbc505dc36ce12fc2f2c65dc4b5f1'
         curl = 'https://api.paystack.co/transaction/initialize'
-        cburl = 'http://34.219.175.97/callback'
-        # cburl = 'http://127.0.0.1:8000/callback'
+        # cburl = 'http://34.226.119.31/callback'
+        cburl = 'http://127.0.0.1:8000/callback'
         user = User.objects.get(username=request.user.username)
         email = user.email
         total = float(request.POST['total']) * 100
